@@ -17,7 +17,7 @@ to authenticated
 using (user_id = auth.uid());
 
 insert into public.gybs_admins (user_id)
-values ('YOUR_AUTH_USER_UUID'::uuid)
+values ('b913507b-5405-4010-8277-6f642be41839'::uuid)
 on conflict (user_id) do nothing;
 
 -- Public campaign pages should expose only live campaigns.
