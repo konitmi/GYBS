@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GYBS Admin</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+</head>
+<body class="admin-page">
+  <main class="admin-shell">
+    <header class="admin-header">
+      <a class="admin-brand" href="index.html"><img src="assets/gybs-logo.png" alt="GYBS"><span>GYBS Admin</span></a>
+      <button id="logout" class="button button-ghost hidden">Log out</button>
+    </header>
+
+    <section id="login-view" class="admin-card">
+      <span class="eyebrow">PRIVATE AREA</span>
+      <h1>Campaign control.</h1>
+      <p class="admin-muted">Sign in with the Supabase admin account you created for GYBS.</p>
+      <form id="login-form">
+        <label><span>Email</span><input id="login-email" type="email" required autocomplete="email"></label>
+        <label><span>Password</span><input id="login-password" type="password" required autocomplete="current-password"></label>
+        <button class="button button-primary full-button" type="submit">Sign in ↗</button>
+      </form>
+      <p id="login-message" class="form-message"></p>
+    </section>
+
+    <section id="dashboard-view" class="hidden">
+      <div class="admin-heading-row">
+        <div><span class="eyebrow">GYBS CAMPAIGNS</span><h1>Review & launch.</h1><p class="admin-muted">Approve campaigns, start demos, or expire them.</p></div>
+        <button id="refresh" class="button button-ghost">Refresh ↻</button>
+      </div>
+      <div id="admin-message" class="admin-message"></div>
+      <div id="campaign-list" class="admin-list"></div>
+    </section>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>
